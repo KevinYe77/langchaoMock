@@ -8,7 +8,7 @@ app.config["JSON_AS_ASCII"] = False  # jsonify返回的中文正常显示
 def read_yaml(path):
     with open(path, 'rb') as f:
         cf= f.read()
-    cf = yaml.load(cf)
+    cf = yaml.safe_load(cf)
     return cf
 
 @app.route('/')

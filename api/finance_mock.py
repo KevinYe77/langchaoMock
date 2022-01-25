@@ -16,20 +16,31 @@ def hello_world():
     return 'Hello World! I am mock!'
 
 
-@app.route('/test')
-def test():
-    r = read_yaml(os.getcwd()+'/data/test.txt')
-    return jsonify({"code": 1001, "msg": r})
 
-#发票申请接口
-@app.route('/fapiaoApply')
-def fapiaoApply():
-    r = read_yaml(os.getcwd()+'/data/test.txt')
-    return jsonify({"code": 2001, "msg": r})
+#收款认领接口
+@app.route('/QueryReceipts')
+def QueryReceipts():
 
-#发票查询接口
-@app.route('/fapiaoCheck')
-def fapiaoCheck():
-    r = read_yaml(os.getcwd()+'/data/test.txt')
-    return jsonify({"code": 3001, "msg": r})
+    companyCode = request.args.get("CompanyCode")
 
+    r = read_yaml(os.getcwd()+'/data/QueryReceipts.txt')
+    list2= []
+    for rs in r:
+       if rs['CompanyCode'] == companyCode:
+           list2.append(rs)
+
+    return jsonify({"Count": len(list2), "Records": list2})
+
+
+#收款认领反馈接口
+@app.route('/ComfirmReceipts')
+def ComfirmReceipts():
+    SerialNo = request.args.get("SerialNo")
+    Flag = request.args.get("Flag")
+
+    r = read_yaml(os.getcwd()+'/data/ComfirmReceipts.txt')
+    for rs in r:
+       if rs['SerialNo'] == SerialNo and rs['Flag'] == Flag:
+           hit = rs
+
+    return jsonify({"Code": hit['Code'], "Message": hit['Message']})

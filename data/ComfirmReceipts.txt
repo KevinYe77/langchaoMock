@@ -1,0 +1,4 @@
+[{'SerialNo':'001','Flag':'1','Code':'2022012501','Message':''},
+{'SerialNo':'002','Flag':'0','Code':'2022012502','Message':''},
+{'SerialNo':'003','Flag':'1','Code':'2022012503','Message':''}
+]

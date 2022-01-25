@@ -1,0 +1,4 @@
+[{'CompanyCode':'001','SerialNo':'001001001','TradeDate':'20220125','Amount':19908,'Account':'637458455555520334','AccountName':'kevinye','OpenBank':'zhaohang','OppositeAccount':'234242342342334234','OppositeAccountName':'nike','OppositeOpenBank':'jianhang','Summary':'nothing','BillType':'normal'},
+{'CompanyCode':'001','SerialNo':'001001002','TradeDate':'20220125','Amount':29908,'Account':'6374584922222020334','AccountName':'tonysong','OpenBank':'zhaohang','OppositeAccount':'234242342342334234','OppositeAccountName':'nike','OppositeOpenBank':'jianhang','Summary':'nothing','BillType':'normal'},
+{'CompanyCode':'003','SerialNo':'001001003','TradeDate':'20220125','Amount':49908,'Account':'63745849477777020334','AccountName':'andyyang','OpenBank':'zhaohang','OppositeAccount':'234242342342334234','OppositeAccountName':'nike','OppositeOpenBank':'jianhang','Summary':'nothing','BillType':'normal'}
+]
